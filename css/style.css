@@ -49,6 +49,12 @@ span {
     margin: 0 auto;
 }
 
+.gray__wrapper {
+    margin-top: 700px;
+    background: #292E34;
+    border-radius: 25px;
+}
+
 /* COMMON STYLES */
 
 .click-btn {
@@ -423,4 +429,72 @@ span {
 
 .possible-link {
     margin-top: 40px;
+}
+
+/* PRESENTATION SECTION */
+
+.presentation {
+    position: relative;
+    top: -540px;
+}
+
+.presentation__wrapper {
+    max-width: 1375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.presentation-title {
+    color: rgb(0, 0, 0);
+    font-size: 68px;
+    font-weight: 600;
+    line-height: 110%;
+}
+
+.presentation-descr {
+    margin-top: 17px;
+    color: rgb(0, 0, 0);
+    max-width: 1041px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.presentation-preview {
+    max-width: 100%;
+    object-fit: contain;
+    margin-top: 30px;
+}
+
+.presentation__link {
+    display: block;
+    margin: 30px auto 0 0;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 145%;
+    text-align: left;
+}
+
+.presentation__link-yt {
+    font-family: 'Segoe UI';
+    font-size: 26.22px;
+    font-weight: 600;
+    line-height: 139.9%;
+    color: rgb(250, 99, 52);
+    position: relative;
+    padding-right: 35px;
+}
+
+.presentation__link-yt::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 31px;
+    height: 24px;
+    background: url(../img/yt-logo.png) center / contain no-repeat;
 }
