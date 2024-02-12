@@ -1,66 +1,66 @@
-function collapse() {
-    const triggers = document.querySelectorAll('.faq-question')
+// function collapse() {
+//     const triggers = document.querySelectorAll('.faq-question')
 
-    triggers.forEach(function(item) {
-        item.addEventListener('click', function() {
-            let answer = item.nextElementSibling
-            if (item.closest('.faq__block').classList.contains('active')) {
-                answer.style.height = ''
-            } else {
-                answer.style.height = answer.scrollHeight + 'px'
-            }
-            item.closest('.faq__block').classList.toggle('active')
-        })
-    })
-}
+//     triggers.forEach(function(item) {
+//         item.addEventListener('click', function() {
+//             let answer = item.nextElementSibling
+//             if (item.closest('.faq__block').classList.contains('active')) {
+//                 answer.style.height = ''
+//             } else {
+//                 answer.style.height = answer.scrollHeight + 'px'
+//             }
+//             item.closest('.faq__block').classList.toggle('active')
+//         })
+//     })
+// }
 
-function scrollTasks() {
-    const triggers = document.querySelectorAll('.task__card')
+// function scrollTasks() {
+//     const triggers = document.querySelectorAll('.task__card')
 
-    triggers.forEach(function(item) {
-        item.addEventListener('click', function(event) {
-            event.preventDefault()
-            let id = item.getAttribute('href')
-            let block = document.querySelector(id)
-            block.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-            })
-        })
-    })
-}
+//     triggers.forEach(function(item) {
+//         item.addEventListener('click', function(event) {
+//             event.preventDefault()
+//             let id = item.getAttribute('href')
+//             let block = document.querySelector(id)
+//             block.scrollIntoView({
+//                 behavior: 'smooth',
+//                 block: 'start',
+//             })
+//         })
+//     })
+// }
 
-function priceSelect() {
-    const triggers = document.querySelectorAll('.table__item-body')
-    const btn = document.querySelector('.price-btn')
+// function priceSelect() {
+//     const triggers = document.querySelectorAll('.table__item-body')
+//     const btn = document.querySelector('.price-btn')
 
-    triggers.forEach(item => {
-        item.addEventListener('click', function() {
-            btn.classList.add('active')
-        })
-    })
-}
+//     triggers.forEach(item => {
+//         item.addEventListener('click', function() {
+//             btn.classList.add('active')
+//         })
+//     })
+// }
 
-priceSelect()
+// priceSelect()
 
-const swiper = new Swiper('.clients-swiper', {
-    slidesPerView: 4,
-    slidesPerGroup: 1,
-    speed: 600,
-    loop: true,
-    navigation: {
-        prevEl: '.swiper-prev',
-        nextEl: '.swiper-next'
-    },
-    breakpoints: {
-        1340: {
-            slidesPerView: 6,
-        }
-    }
-});
+// const swiper = new Swiper('.clients-swiper', {
+//     slidesPerView: 4,
+//     slidesPerGroup: 1,
+//     speed: 600,
+//     loop: true,
+//     navigation: {
+//         prevEl: '.swiper-prev',
+//         nextEl: '.swiper-next'
+//     },
+//     breakpoints: {
+//         1340: {
+//             slidesPerView: 6,
+//         }
+//     }
+// });
 
-collapse()
-scrollTasks()
+// collapse()
+// scrollTasks()
 
 function possibleTabs() {
     const tabs = document.querySelectorAll('.possible-tab')
@@ -84,3 +84,9 @@ function possibleTabs() {
 }
 
 possibleTabs()
+
+const blogSwiper = new Swiper('.blog-swiper', {
+    spaceBetween: 40,
+    slidesPerView: 4,
+    loop: true
+})
