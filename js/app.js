@@ -57,7 +57,7 @@ function possibleCollapse() {
     triggerBtns.forEach(function(btn) {
         btn.addEventListener('click', function() {
             let currentBlock = btn.nextElementSibling
-            
+
             if (btn.classList.contains('active')) {
                 currentBlock.style.height = ''
             } else {
@@ -80,11 +80,12 @@ if(window.innerWidth >= 999) {
 }
 
 const blogSwiper = new Swiper('.blog-swiper', {
-    spaceBetween: 40,
+    spaceBetween: 20,
     slidesPerView: 2,
     loop: true,
     breakpoints: {
         1440: {
+            spaceBetween: 40,
             slidesPerView: 3,
         },
         1600: {
