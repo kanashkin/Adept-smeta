@@ -26,8 +26,12 @@ function priceSelect() {
 }
 
 function possibleTabs() {
-    const tabs = document.querySelectorAll('.possible-tab')
-    const contentBlocks = document.querySelectorAll('.possible-item')
+    const possibleBlock = document.querySelector('.possible__main.desktop')
+    const tabs = possibleBlock.querySelectorAll('.possible-tab')
+    const contentBlocks = possibleBlock.querySelectorAll('.possible-item')
+
+    tabs[0].classList.add('active')
+    contentBlocks[0].classList.add('active')
 
     tabs.forEach(function(tab) {
         tab.addEventListener('click', function() {
@@ -46,9 +50,34 @@ function possibleTabs() {
     })
 }
 
+function possibleCollapse() {
+    const possibleBlock = document.querySelector('.possible__main.mobile')
+    const triggerBtns = possibleBlock.querySelectorAll('.possible-tab')
+
+    triggerBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            let currentBlock = btn.nextElementSibling
+            
+            if (btn.classList.contains('active')) {
+                currentBlock.style.height = ''
+            } else {
+                currentBlock.style.height = currentBlock.scrollHeight + 80 + 'px'
+            }
+
+            btn.classList.toggle('active')
+            currentBlock.classList.toggle('active')
+        })
+    })
+}
+
 priceSelect()
 collapse()
-possibleTabs()
+
+if(window.innerWidth >= 999) {
+    possibleTabs()
+} else {
+    possibleCollapse()
+}
 
 const blogSwiper = new Swiper('.blog-swiper', {
     spaceBetween: 40,
