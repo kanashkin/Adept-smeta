@@ -14,7 +14,6 @@ function collapse() {
     })
 }
 
-
 function priceSelect() {
     const triggers = document.querySelectorAll('.table__item-body')
 
@@ -53,6 +52,14 @@ possibleTabs()
 
 const blogSwiper = new Swiper('.blog-swiper', {
     spaceBetween: 40,
-    slidesPerView: 4,
-    loop: true
+    slidesPerView: 2,
+    loop: true,
+    breakpoints: {
+        1440: {
+            slidesPerView: 3,
+        },
+        1600: {
+            slidesPerView: 4,
+        },
+    }
 })

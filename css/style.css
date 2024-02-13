@@ -59,6 +59,13 @@ span {
     border-radius: 25px;
 }
 
+@media(max-width: 1439px) {
+    .gray__wrapper {
+        padding: 300px 0 57px;
+        margin-top: 658px;
+    }
+}
+
 /* COMMON STYLES */
 
 .click-btn {
@@ -118,7 +125,7 @@ span {
 }
 
 .promo__wrapper {
-    max-width: 1167px;
+    max-width: 1227px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,6 +166,12 @@ span {
     bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+@media(max-width: 1440px) {
+    .promo-laptop {
+        max-width: 90%;
+    }
 }
 
 /* PRODUCTS SECTION */
@@ -275,6 +288,12 @@ span {
     margin: auto 0 0 0;
 }
 
+@media(max-width: 1439px) {
+    .products {
+        margin-top: 110px;
+    }
+}
+
 /* CMP SECTION */
 
 .cmp {
@@ -285,6 +304,7 @@ span {
     max-width: 1600px;
     padding: 80px 110px;
     border-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.28);
     background: rgb(242, 243, 245);
 }
 
@@ -297,8 +317,8 @@ span {
 }
 
 .cmp-img {
-    max-width: 100%;
-    object-fit: contain;
+    width: 100%;
+    object-fit: cover;
     margin-top: 50px;
 }
 
@@ -349,10 +369,27 @@ span {
     margin: 20px 0 0 auto;
 }
 
+@media(max-width: 1600px) {
+    .cmp__wrapper {
+        padding: 80px 30px;
+    }
+}
+
+@media(max-width: 1439px) {
+    .cmp {
+        margin-top: 120px;
+    }
+    .cmp__list {
+        row-gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* POSSIBLE SECTION */
 
 .possible {
     margin-top: 160px;
+    padding-left: 30px;
 }
 
 .possible__wrapper {
@@ -363,7 +400,8 @@ span {
 }
 
 .possible__header {
-    background: linear-gradient(96.12deg, rgb(40, 45, 51) -5.477%,rgb(40, 45, 51) 34.526%,rgba(0, 0, 0, 0) 77.988%);
+    background-color: rgb(40, 45, 51);
+    border-radius: 25px 0 0 0;
     padding: 80px 0 40px 106px;
     border-bottom: rgba(255, 255, 255, .5);
 }
@@ -433,6 +471,28 @@ span {
 .possible-link {
     margin-top: 40px;
 }
+
+@media(max-width: 1439px) {
+    .possible {
+        margin-top: 120px;
+    }
+    .possible__tabs {
+        width: 40%;
+    }
+    .possible-tab {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .possible-tab br {
+        display: none;
+    }
+    .possible__content {
+        padding: 40px 30px 67px 60px;
+    }
+    .possible__content-item {
+        max-width: 100%;
+    }
+} 
 
 /* PRESENTATION SECTION */
 
@@ -540,14 +600,31 @@ span {
     line-height: 150%;
 }
 
+@media(max-width: 1439px) {
+    .blog-title {
+        font-size: 36px;
+    }
+    .blog-link {
+        margin-top: 22px;
+    }
+    .blog__info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 50px;
+        row-gap: 30px;
+    }
+    
+}
+
 /* BLOG SWIPER */
 
 .blog-swiper {
     margin-top: 40px;
 }
 
-.post {
-    width: 460px !important;
+.post-preview {
+    width: 100%;
+    object-fit: contain;
 }
 
 .post__info {
@@ -594,6 +671,12 @@ span {
     background: #154F68;
 }
 
+@media(max-width: 1339px) {
+    .blog-swiper {
+        margin-left: 30px !important;
+    }
+}
+
 /* PRICE SECTION */
 
 .price {
@@ -607,7 +690,6 @@ span {
     line-height: 110%;
     letter-spacing: 0.5px;
 }
-
 
 .table {
     margin-top: 40px;
@@ -696,11 +778,25 @@ span {
     font-weight: 600;
 }
 
+.adaptive-btn {
+    display: none;
+}
+
 @media(max-width: 1339px) {
+    .price {
+        margin-top: 120px;
+    }
+    .table__wrapper {
+        grid-template-columns: repeat(7, 1fr);
+    }
+    .table__item:last-child {
+        display: none;
+    }
     .price-title {
         font-size: 36px;
     }
     .table__item-header {
+        height: 65px;
         padding: 10px 0;
         padding-right: 20px;
     }
@@ -708,6 +804,10 @@ span {
     .table__item-body {
         margin-right: 20px;
         height: 40px;
+    }
+    .adaptive-btn {
+        display: block;
+        margin: 20px 0 0 auto;
     }
 }
 
@@ -770,6 +870,10 @@ span {
 
 .faq__block {
     border-bottom: 1px solid #C1C1C1;
+}
+
+.faq__block:first-child .faq-question {
+    padding-top: 0;
 }
 
 .faq-question {
@@ -847,4 +951,17 @@ span {
     margin-top: 20px;
     display: flex;
     gap: 14px;
+}
+
+@media(max-width: 1339px) {
+    .faq {
+        padding: 100px 0;
+    }
+    .faq__wrapper {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .faq-title {
+        max-width: 75%;
+    }
 }
