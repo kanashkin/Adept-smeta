@@ -72,20 +72,9 @@ function possibleCollapse() {
 
 priceSelect()
 collapse()
+possibleTabs()
+possibleCollapse()
 
-if(window.innerWidth >= 999) {
-    possibleTabs()
-} else {
-    possibleCollapse()
-}
-
-window.addEventListener('resize', function() {
-    if(window.innerWidth >= 999) {
-        possibleTabs()
-    } else {
-        possibleCollapse()
-    }
-})
 
 const blogSwiper = new Swiper('.blog-swiper', {
     spaceBetween: 20,

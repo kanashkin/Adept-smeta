@@ -1031,6 +1031,46 @@ span {
     background: #154F68;
 }
 
+.blog-swiper:hover .swiper__nav {
+    opacity: 1;
+    z-index: 2;
+}
+
+.swiper__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    opacity: 0;
+    z-index: -1;
+    transition: .4s all;
+}
+
+.swiper-btn {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.swiper-btn:hover svg circle {
+    transition: .4s all;
+}
+
+.swiper-btn:hover svg circle {
+    fill: #4E719E;
+}
+
+.swiper-next {
+    position: absolute;
+    right: 5%;
+}
+
+.swiper-prev {
+    position: absolute;
+    left: 5%;
+}
+
 @media(max-width: 1339px) {
     .blog-swiper {
         margin-left: 30px !important;
