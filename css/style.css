@@ -139,6 +139,11 @@ span {
     width: 7px;
     height: 11px;
     background: url(../img/chevron-right.png) center / contain no-repeat;
+    transition: .3s all;
+}
+
+.page-link:hover::after {
+    right: -6px;
 }
 
 /* PROMO SECTION */
@@ -191,6 +196,19 @@ span {
     bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(104, 153, 216, .7);
+    transition: .4s all;
+    cursor: pointer;
+}
+
+.promo-arrow:hover {
+    background: rgba(104, 153, 216, 1);
 }
 
 @media(max-width: 1439px) {
@@ -475,6 +493,15 @@ span {
     margin: 20px 0 0 auto;
 }
 
+.cmp__item:first-child .cmp__item-descr,
+.cmp__item:nth-child(3) .cmp__item-descr {
+    max-width: 93.5%;
+}
+
+.cmp__item:nth-child(3) .cmp__item-title {
+    max-width: 70%;
+}
+
 @media(max-width: 1600px) {
     .cmp__wrapper {
         padding: 80px 30px;
@@ -581,7 +608,6 @@ span {
 }
 
 .possible-tab {
-    width: 108%;
     padding: 20px;
     color: rgb(255, 255, 255);
     font-size: 16px;
@@ -650,6 +676,9 @@ span {
         padding: 40px 30px 67px 60px;
     }
     .possible__content-item {
+        max-width: 100%;
+    }
+    .possible__main.desktop .possible__content-item {
         max-width: 100%;
     }
 }

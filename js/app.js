@@ -79,6 +79,14 @@ if(window.innerWidth >= 999) {
     possibleCollapse()
 }
 
+window.addEventListener('resize', function() {
+    if(window.innerWidth >= 999) {
+        possibleTabs()
+    } else {
+        possibleCollapse()
+    }
+})
+
 const blogSwiper = new Swiper('.blog-swiper', {
     spaceBetween: 20,
     slidesPerView: 2,
