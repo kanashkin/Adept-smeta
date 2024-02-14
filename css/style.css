@@ -448,6 +448,9 @@ span {
     width: 100%;
     object-fit: cover;
     margin-top: 50px;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(50, 50, 71, 0.06),0px 0px 8px 0px rgba(50, 50, 71, 0.13);
 }
 
 .cmp-btn {
@@ -778,8 +781,10 @@ span {
     .possible-title {
         font-size: 48px;
     }
-    .possible__main.mobile .possible-item.active .possible-item__text {
-        height: 90%;
+    .possible__main.mobile .possible-item__text {
+        height: fit-content;
+        padding-right: 0;
+        overflow: hidden;
     }
 }
 
