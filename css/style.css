@@ -119,6 +119,11 @@ span {
     color: #fff;
 }
 
+.black-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
 .page-link {
     color: rgb(104, 153, 216);
     font-size: 18px;
@@ -711,7 +716,12 @@ span {
     .trigger-arrow {
         display: block;
         margin: 0 0 0 auto;
+        transition: .4s all;
     }
+    .possible-tab.active .trigger-arrow {
+        transform: rotate(-180deg);
+    }
+    
     .possible__main.mobile .possible-item {
         margin-bottom: 12px;
         background:
