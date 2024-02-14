@@ -979,6 +979,7 @@ span {
 /* BLOG SWIPER */
 
 .blog-swiper {
+    margin-left: 30px !important;
     margin-top: 40px;
 }
 
@@ -1018,6 +1019,10 @@ span {
     line-height: 150%;
 }
 
+.post {
+    width: 460px !important;
+}
+
 .post.gray .post__info-category {
     background: #6A758F;
 }
@@ -1047,8 +1052,6 @@ span {
 }
 
 .swiper-btn {
-    width: 40px;
-    height: 40px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -1071,11 +1074,6 @@ span {
     left: 5%;
 }
 
-@media(max-width: 1339px) {
-    .blog-swiper {
-        margin-left: 30px !important;
-    }
-}
 
 @media(max-width: 767px) {
     .post {

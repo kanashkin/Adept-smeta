@@ -78,15 +78,17 @@ possibleCollapse()
 
 const blogSwiper = new Swiper('.blog-swiper', {
     spaceBetween: 20,
-    slidesPerView: 2,
+    slidesPerView: 'auto',
     loop: true,
+    navigation: {
+        prevEl: '.swiper-prev',
+        nextEl: '.swiper-next'
+    },
     breakpoints: {
         1440: {
             spaceBetween: 40,
-            slidesPerView: 3,
         },
         1600: {
-            slidesPerView: 4,
         },
     }
 })
