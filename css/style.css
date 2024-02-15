@@ -606,27 +606,33 @@ span {
     display: flex;
 }
 
+.possible__tabs__wrapper {
+    width: 32%;
+    padding-right: 5px;
+}
+
 .possible__tabs {
     position: relative;
     z-index: 5;
     padding: 0 0 67px 106px;
     margin-top: 40px;
-    width: 32%;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding-right: 10px;
 }
 
 .possible__main.desktop .possible__tabs {
     overflow-y: scroll;
+    height: 90vh;
 }
 
 .possible__main.desktop .possible__content-item {
     height: 100%;
 }
 
-.possible__main.desktop .possible-item__text {
-    height: 80%;
+.possible-item__text {
+    max-height: 70vh;
 }
 
 .possible-item__text {
@@ -666,7 +672,7 @@ span {
 }
 
 .possible__content {
-    padding: 40px 0 67px 130px;
+    padding: 40px 0 67px 100px;
     width: 70%;
     background: linear-gradient(93.41deg, rgba(26, 30, 34, 0.39) 10.449%,rgba(0, 0, 0, 0) 87.202%);
 }
@@ -702,8 +708,7 @@ span {
     .possible-title {
         font-size: 60px;
     }
-    .possible__main.desktop .possible__tabs {
-        max-height: 1564px;
+    .possible__main.desktop .possible__tabs__wrapper {
         width: 45%;
     }
     .possible-tab {
@@ -732,6 +737,7 @@ span {
         display: none;
     }
     .possible__tabs {
+        margin-top: 0;
         gap: 0;
         padding: 0;
         width: 100%;
@@ -782,9 +788,7 @@ span {
         font-size: 48px;
     }
     .possible__main.mobile .possible-item__text {
-        height: fit-content;
         padding-right: 0;
-        overflow: hidden;
     }
 }
 
